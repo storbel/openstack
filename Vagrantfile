@@ -6,7 +6,7 @@ sudo yum -y install openstack-packstack
 sudo su -
 #packstack --allinone
 packstack --gen-answer-file=/root/myanswerfile.txt
-
+# need to update the password/user/ip ...
 packstack --answer-file=/root/myanswerfile.txt
 
 PACKSTACK
