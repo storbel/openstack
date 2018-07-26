@@ -29,8 +29,8 @@ Vagrant.configure("2") do |config|
 	  # Customize the amount of memory on the VM:
 	  vb.memory = "3072"
 	end
-	config.vm.provision "shell",
-		inline: "sudo yum update ; sudo yum install -y python"
+	#config.vm.provision "shell",
+	#	inline: "sudo yum update ; sudo yum install -y python"
 		
 		
 	config.vm.provision "ansible" do |ansible|

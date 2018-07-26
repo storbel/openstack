@@ -1,0 +1,22 @@
+---
+# tasks file for packstack
+
+- name:
+  setup:
+   filter:
+- name: Push template file
+  template: src=answer_file.j2 dest=/root/myanswerfile.txt mode=0655
+  
+- name: upgrade all packages
+  yum:
+    name: '*'
+    state: latest
+- name :  install RDO rpm 
+  package: name={{item}} state=present
+  with_items:
+   - https://www.rdoproject.org/repos/rdo-release.rpm
+   - openstack-packstack
+  
+#- name: install packstack
+#  raw : "packstack --answer-file=/root/myanswerfile.txt" 
+  

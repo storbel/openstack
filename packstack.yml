@@ -1,0 +1,8 @@
+---
+
+- hosts : openstack
+  remote_user: root
+  become: false
+  roles:
+    - packstack
+    
