@@ -1,8 +1,9 @@
 ---
 
 - hosts : openstack
-  remote_user: root
-  become: false
+  remote_user: vagrant
+  become: true
+  become_user: root
   roles:
     - packstack
     
