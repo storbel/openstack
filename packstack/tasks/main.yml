@@ -17,6 +17,6 @@
    - https://www.rdoproject.org/repos/rdo-release.rpm
    - openstack-packstack
   
-#- name: install packstack
-#  raw : "packstack --answer-file=/root/myanswerfile.txt" 
+- name: install packstack
+  shell : packstack --answer-file=/root/myanswerfile.txt 
   
